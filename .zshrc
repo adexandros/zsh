@@ -106,7 +106,7 @@ alias mrun='php n98-magerun.phar'
 alias mruninstall='wget https://files.magerun.net/n98-magerun.phar; chmod +x ./n98-magerun.phar;'
 alias mdeploy='bin/magento setup:static-content:deploy en_GB en_US'
 alias gruntgo='grunt exec; grunt less; grunt watch;'
-
+alias gmf='git merge --no-ff'
 
 PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
 export PATH=$PATH:/Applications/MAMP/Library/bin
