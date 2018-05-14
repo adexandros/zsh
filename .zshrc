@@ -1,13 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/adexandros/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="awesomepanda"
+ZSH_THEME="refined"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -107,7 +108,13 @@ alias mruninstall='wget https://files.magerun.net/n98-magerun.phar; chmod +x ./n
 alias mdeploy='bin/magento setup:static-content:deploy en_GB en_US'
 alias gruntgo='grunt exec; grunt less; grunt watch;'
 alias gmf='git merge --no-ff'
+alias deploydev='cd tools/cap; cap development deploy;'
+alias mflush='php -dmemory_limit=8G bin/magento cache:flush block_html layout;'
+alias magenewmodule='bash /Users/adexandros/sites/create-module.sh $1'
+alias mupgrade='php -dmemory_limit=8G bin/magento setup:upgrade; bin/magento setup:di:compile; tput bel;'
+alias copykey='pbcopy < ~/.ssh/id_rsa.pub;'
 
-PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
+#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
 export PATH=$PATH:/Applications/MAMP/Library/bin
-
+PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
