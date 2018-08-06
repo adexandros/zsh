@@ -113,8 +113,12 @@ alias mflush='php -dmemory_limit=8G bin/magento cache:flush block_html layout;'
 alias magenewmodule='bash /Users/adexandros/sites/create-module.sh $1'
 alias mupgrade='php -dmemory_limit=8G bin/magento setup:upgrade; bin/magento setup:di:compile; tput bel;'
 alias copykey='pbcopy < ~/.ssh/id_rsa.pub;'
+alias php72='PATH="/Applications/MAMP/bin/php/php7.2.1/bin:$PATH"'
+alias lightbella='lighthouse https://bf-staging.limebuild.net/ --chrome-flags="--headless" --disable-device-emulation --disable-cpu-throttling --disable-network-throttling; lighthouse https://bf-staging.limebuild.net/ --chrome-flags="--headless"; lighthouse https://bf-staging.limebuild.net/handbags.html --chrome-flags="--headless" --disable-device-emulation --disable-cpu-throttling --disable-network-throttling; lighthouse https://bf-staging.limebuild.net/handbags.html/ --chrome-flags="--headless"'
 
-#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
+
+#PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`export PATH=/Applications/MAMP/bin/php/php7.0.27/bin:$PATH
 export PATH=$PATH:/Applications/MAMP/Library/bin
 PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-export PATH=/Applications/MAMP/bin/php/php7.0.13/bin:$PATH
+export PATH=/Applications/MAMP/bin/php/php7.0.27/bin:$PATH
+#PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
